@@ -5,146 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emons Replica</title>
   <link rel="stylesheet" href="css/style.css" />
+
   <style>
-  /* General Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  html, body {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: sans-serif;
-  }
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
 
-  /* Background Video */
-  #bgVideo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-  /* Content to sit above video */
-  .content {
-    position: relative;
-    z-index: 1;
-    padding: 100px 20px;
-    color: white;
-  }
-
-  /* Mobile Fallback */
-  @media (max-width: 768px) {
+    /* Background Video */
     #bgVideo {
-      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
-    body {
-      background: url('media/fallback.jpg') no-repeat center center;
-      background-size: cover;
+    /* Content above video */
+    .content {
+      position: relative;
+      z-index: 1;
     }
-  }
-</style>
 
+    /* Mobile fallback */
+    @media (max-width: 768px) {
+      #bgVideo {
+        display: none;
+      }
+
+      body {
+        background: url('media/fallback.jpg') no-repeat center center;
+        background-size: cover;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="video-wrapper">
-
-    <video autoplay muted loop playsinline
-  
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-
-  <source src="media/bgvideo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    overflow-x: hidden;
-  }
-
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-</style>
-
-
-
- <header>
-  <!-- <video autoplay muted loop playsinline class="header-video">
-    <source src="C:\Users\hp\Desktop\PLSQL Prep Kit\media\vecteezy_purple-fire-effect-loop-animation_3662968.mp4.mp4" type="video/mp4" />
+  <!-- ✅ Background Video -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="media/bgvideo.mp4" type="video/mp4">
     Your browser does not support the video tag.
-  </video> -->
+  </video>
 
-  <div class="container">
-    <div class="logo">JobSwitch Pro</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-  </div>
-</header>
+  <!-- ✅ Website Content Starts -->
+  <div class="content">
 
+    <header>
+      <div class="container">
+        <div class="logo">JobSwitch Pro</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+      </div>
+    </header>
 
-  <section class="hero">
-  <!-- <video autoplay muted loop playsinline class="hero-video">
-    <source src="C:\Users\hp\Downloads\7de8d88a-b783-4a7b-8217-7419e13fd2b5_seed616479517.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video> -->
-  <div class="hero-content">
-    <h1>JobSwitch Pro: PL/SQL Edition</h1>
-    <p>Transform your career</p>
-    <a href="#services" class="hero-btn">Explore Services</a>
-  </div>
-</section>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>JobSwitch Pro: PL/SQL Edition</h1>
+        <p>Transform your career</p>
+        <a href="#services" class="hero-btn">Explore Services</a>
+      </div>
+    </section>
 
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card" data-popup="Road Transport">Foundation Kit</div>
+        <div class="service-card" data-popup="Air Freight">Pro Kit</div>
+        <div class="service-card" data-popup="Sea Freight">Elite Kit</div>
+      </div>
+    </section>
 
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card" data-popup="Road Transport">Foundation Kit</div>
-      <div class="service-card" data-popup="Air Freight">Pro Kit</div>
-      <div class="service-card" data-popup="Sea Freight">Elite Kit</div>
+    <section class="footer">
+      <p>&copy; 2025 J&L Group. All rights reserved.</p>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <span id="popup-close">&times;</span>
+        <h3 id="popup-title"></h3>
+        <p>This is a placeholder description for the selected service.</p>
+      </div>
     </div>
-  </section>
 
-  <section class="footer">
-    <p>&copy; 2025 J&L Group. All rights reserved.</p>
-  </section>
-
-
-  <!-- Popup Modal -->
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span id="popup-close">&times;</span>
-      <h3 id="popup-title"></h3>
-      <p>This is a placeholder description for the selected service.</p>
-    </div>
-  </div>
+  </div> <!-- end of content wrapper -->
 
   <script src="js/script.js"></script>
-  </div>
 </body>
 </html>
-
-
-
