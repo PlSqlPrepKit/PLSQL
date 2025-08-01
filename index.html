@@ -5,6 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emons Replica</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+  }
+
+  /* Background Video */
+  #bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Content to sit above video */
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 20px;
+    color: white;
+  }
+
+  /* Mobile Fallback */
+  @media (max-width: 768px) {
+    #bgVideo {
+      display: none;
+    }
+
+    body {
+      background: url('media/fallback.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+</style>
+
 </head>
 <body>
   <div class="video-wrapper">
