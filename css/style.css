@@ -6,12 +6,11 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
+body {
+  overflow-x: hidden; /* Only disables horizontal scroll */
+  overflow-y: auto;   /* Enables vertical scroll */
 }
+
 
 
 body {
