@@ -13,7 +13,7 @@
   color: #333;
 } */
 body {
-  background: url("../media/bg.png") no-repeat center center fixed;
+  background: url("media/bg.png") no-repeat center center fixed;
   background-size: cover;
   color: #fff; /* optional: makes text white */
 }
