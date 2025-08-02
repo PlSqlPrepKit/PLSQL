@@ -93,16 +93,19 @@ nav ul li a:hover {
 }
 
 .hero-btn {
-  padding: 12px 25px;
-  background: #c00000;
+  background-color: transparent;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  text-decoration: underline;
+  border: none; /* or add border: 1px solid white; if you want outline */
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
-  background: #900000;
+  color: #ff4c4c; /* hover color */
+  text-decoration: none;
 }
 
 .services {
