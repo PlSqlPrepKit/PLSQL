@@ -258,10 +258,22 @@ html {
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 14ch } /* 14 characters in "PLSQL Edition" */
+  to { width: 11ch } /* 14 characters in "PLSQL Edition" */
 }
+
 
 @keyframes blink {
   50% { border-color: transparent; }
+
+
+  .typing-text2 {
+  font-family: 'TropicalMorning', cursive;
+  font-size: 26px !important;
+  color: white;
+  width: fit-content;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 
