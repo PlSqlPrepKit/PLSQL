@@ -29,7 +29,7 @@
   }
 
   body {
-    background-image: url('../media/bg-image.jpg'); /* replace with your image path */
+    background-image: url('../media/bg1.jpg'); /* replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
